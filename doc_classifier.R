@@ -38,7 +38,7 @@ bindCandidateToTDM <- function(tdm) {
   s.mat <- t(data.matrix(tdm[["tdm"]]))
   s.df <- as.data.frame(s.mat, stringAsFactors = FALSE)
   s.df <-cbind (s.df, rep(tdm[["name"]], nrow(s.df)))
-  colnames(s.df)[ncol(s.df)] <- "targetCandiate"
+  colnames(s.df)[ncol(s.df)] <- "targetCandidate"
   return(s.df)
 }
 candTDM <- lapply(tdm, bindCandidateToTDM)
